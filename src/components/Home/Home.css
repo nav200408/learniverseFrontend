@@ -1,0 +1,112 @@
+.home-page-main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Hero Section Styles --- */
+.home-page-hero-section {
+    /* A modern blue/purple gradient background */
+    background: linear-gradient(135deg, #2b5876 0%, #29a9f3 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    /* Add a slight curve to the bottom of the header */
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+}
+
+.home-page-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home-page-main-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.home-page-tagline {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* --- Info Section Styles --- */
+.home-page-info-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    /* This ensures the section expands to fill space, keeping the CTA at bottom */
+    flex: 1; 
+}
+
+.home-page-section-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #2b5876;
+    margin-bottom: 40px;
+}
+
+.home-page-info-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows cards to stack on mobile */
+}
+
+.home-page-info-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    flex: 1 1 300px; /* Flex-grow, shrink, basis width */
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.home-page-info-card:hover {
+    transform: translateY(-5px);
+}
+
+.home-page-card-title {
+    color: #4e4376;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.home-page-card-desc {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- CTA / Button Section Styles --- */
+.home-page-cta-container {
+    padding: 40px 20px 80px 20px;
+    text-align: center;
+    background-color: transparent;
+    margin-top: auto; /* Pushes this container to the bottom */
+}
+
+.home-page-discover-btn {
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    color: white;
+    border: none;
+    padding: 18px 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(78, 67, 118, 0.3);
+    transition: all 0.3s ease;
+}
+
+.home-page-discover-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(78, 67, 118, 0.4);
+    background: linear-gradient(to right, #3a7ea8, #635596);
+}
