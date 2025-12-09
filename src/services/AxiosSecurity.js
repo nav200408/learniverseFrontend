@@ -17,14 +17,14 @@ axiosClient.interceptors.request.use((config) => {
     return config;
 });
 
-// Response Interceptor - nếu lỗi 401 → refresh → retry
+// Response Interceptor - nếu lỗi 401 HOẶC 403 → refresh → retry
 axiosClient.interceptors.response.use(
     (response) => response,
     async (error) => {
         const originalRequest = error.config;
 
-        // Nếu lỗi 401 và chưa retry lần 2
-        if (error.response?.status === 401 && !originalRequest._retry) {
+        // KIỂM TRA: Nếu lỗi là 401 HOẶC 403 và chưa retry
+        if ((error.response?.status === 401 || error.response?.status === 403) && !originalRequest._retry) {
             originalRequest._retry = true;
 
             try {
@@ -43,6 +43,9 @@ axiosClient.interceptors.response.use(
                 return axiosClient(originalRequest);
             } catch (err) {
                 console.error("Refresh token failed", err);
+                // Nên xóa token cũ nếu refresh thất bại để user đăng nhập lại
+                localStorage.removeItem("access token");
+                localStorage.removeItem("refresh token");
                 return Promise.reject(err);
             }
         }

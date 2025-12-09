@@ -27,11 +27,11 @@ export function registerService(formData) {
 }
 export async function refereshService(refreshToken){
  
-let accessToken = await axios.post(`http://localhost:8084/user-route/api/auth/refresh?refreshToken=${refreshToken}`,{
+let accessToken = await axios.post(`http://localhost:8084/user-route/api/auth/refresh?refreshToken=${refreshToken}`,null,{
   headers:{
     'Content-Type': 'application/json'
   }
-})  
-localStorage.setItem("access token", accessToken.data);
-return accessToken
+})
+console.log(accessToken);
+return accessToken.data
 }

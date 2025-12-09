@@ -1,0 +1,13 @@
+.courseDetailSection{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    padding-bottom: 100px;
+    align-items: flex-start; 
+    /* ADD THESE LINES */
+    justify-content: center; /* Centers items horizontally */
+    gap: 30px;               /* Adds space between the menu and the card */
+    width: 100%;
+    margin-left:70px
+}
