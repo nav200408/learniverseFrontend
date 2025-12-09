@@ -1,0 +1,120 @@
+/* Add these styles to your courseDetail.css */
+.course-page {
+  padding: 20px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.section-header:hover {
+  background-color: #e9ecef;
+}
+
+.section-header h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.toggle-icon {
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.lesson {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  transition: background-color 0.2s ease;
+}
+
+.lesson:hover {
+  background-color: #f8f9fa;
+}
+
+.lesson:last-child {
+  border-bottom: none;
+}
+
+.document-icon, .video-icon {
+  margin-right: 12px;
+  font-size: 16px;
+  width: 16px;
+}
+
+.document-icon.pdf {
+  color: #e74c3c;
+}
+
+.document-icon.word {
+  color: #2b579a;
+}
+
+.document-icon.excel {
+  color: #217346;
+}
+
+.document-icon.powerpoint {
+  color: #d24726;
+}
+
+.document-icon.text {
+  color: #7f8c8d;
+}
+
+.document-icon.default {
+  color: #95a5a6;
+}
+
+.video-icon {
+  color: #e74c3c;
+}
+
+.lesson-number {
+  margin-right: 12px;
+  font-weight: bold;
+  color: #666;
+  min-width: 25px;
+  font-size: 14px;
+}
+
+.lesson-title {
+  flex: 1;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ecf0f1;
+}

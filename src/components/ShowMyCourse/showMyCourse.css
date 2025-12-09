@@ -1,0 +1,146 @@
+/* Dashboard.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7f9;
+  color: #333;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #2d3748;
+}
+
+.horizontal-courses {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #667eea;
+  min-width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-header {
+  margin-bottom: 15px;
+}
+
+.course-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.course-category {
+  background: #e8f5e9;
+  color: #4caf50;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.course-description p:first-child {
+  color: #718096;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.course-description p:last-child {
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.progress-container {
+  margin-bottom: 15px;
+  margin-top: auto;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #667eea;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 12px;
+  color: #718096;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.course-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  background: #667eea;
+  color: white;
+}
+
+.course-button:hover {
+  background: #5a6fd5;
+}
+
+.start-date {
+  font-size: 12px;
+  color: #718096;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .horizontal-courses {
+    flex-direction: column;
+  }
+  
+  .course-card {
+    min-width: auto;
+  }
+  
+  .course-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}

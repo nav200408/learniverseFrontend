@@ -1,0 +1,4 @@
+.learning-page-container {
+    display: flex;
+    flex-direction: row; /* Default, places items side-by-side */
+}

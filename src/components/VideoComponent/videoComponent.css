@@ -1,0 +1,22 @@
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 600px;
+}
+
+.video-player {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  background-color: #000;
+}
+
+@media (max-width: 600px) {
+  .video-player {
+    width: 100%;
+  }
+}
