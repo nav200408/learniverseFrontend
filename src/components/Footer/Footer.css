@@ -1,0 +1,30 @@
+.footer {
+  background-color: #0d0d0e;
+  padding: 20px 0px;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-title h3 {
+  margin: 0;
+  color: #e8e7e7;
+  font-size: 1.2rem;
+}
+
+.footer-copyright p {
+  margin: 5px 0;
+  color: #e5e4e4;
+  font-size: 0.9rem;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  color: #e7e6e6;
+  font-size: 0.9rem;
+}
