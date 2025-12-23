@@ -15,6 +15,7 @@ import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import ContentMenu from "./components/ContentMenu/ContentMenu"
 import { LearningPage } from "./pages/LearningPage/LearningPage"
+import { ManageCourseComponent } from "./components/ManageCourse/ManageCourse"
 export function Layout(){
     return(<>
     <Routes>
@@ -50,6 +51,10 @@ export function Layout(){
        <Route
        path="my-courses"
        element={<><Header></Header><Dashboard/></>}
+       />
+       <Route
+       path="manage-course"
+       element={<><ManageCourseComponent/></>}
        />
 
     </Route>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './contentMenu.css';
 import { getCourseById } from '../../services/CourseService/CourseService';
 import { useNavigate } from 'react-router-dom';
-import { downloadDocument } from '../../services/StreamingService/StreamingService';
 
 const ContentMenu = () => {
   let [course, setCourse] = useState(null);
@@ -66,10 +65,8 @@ const ContentMenu = () => {
             {/* Documents List */}
             <div className="content-menu-items-group">
               {unit?.documents?.map((document) => (
-                <div key={document.documentId} className="content-menu-item doc-type" onClick={()=>{
-                  downloadDocument(document?.filename);
-                }}>
-                  <div className="content-menu-item-title">📄 {document.documentName}</div>
+                <div key={document.documentId} className="content-menu-item doc-type">
+                  <div className="content-menu-item-title">📄 <a href={`http://localhost:8084/stream-route/document/download/${document.filename}`}>{document.documentName}</a></div>
                   <div className="content-menu-item-subtitle">{document.documentDescribtion}</div>
                 </div>
               ))}

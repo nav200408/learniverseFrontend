@@ -77,6 +77,9 @@ export default function Header() {
                 <div className="dropdown-item" onClick={() => navigate("/wishlist")}>
                   Wishlist
                 </div>
+                <div className="dropdown-item" onClick={() => navigate("/manage-course")}>
+                  Manage Courses
+                </div>
                 <div className="dropdown-item logout" onClick={logout}>
                   Logout
                 </div>
